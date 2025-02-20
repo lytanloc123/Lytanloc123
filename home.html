@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Dự án bảo vệ môi trường</h1>
+  <p>Resize the browser window to see the effect.</p>
+</div>
+
+<div class="topnav">
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#" style="float:right">Link</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Bảo vệ môi trường</h2>
+      <h5>Title description, Dec 7, 2017</h5> 
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAMAAzAMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAADBAIFAQYHAAj/xAA7EAACAQMDAQYEAgkEAgMAAAABAgMABBEFEiExBhMiQVFhMnGBkQcUFSNCUqGxweHwJDNy0WKCFkNT/8QAGgEAAgMBAQAAAAAAAAAAAAAAAgMBBAUABv/EACURAAMAAgIDAQABBQEAAAAAAAABAgMRITEEEkETcSIyUdHwFP/aAAwDAQACEQMRAD8APbxiUeFxn0NTLmGTbIxXPTHCn61Gwhe5dyGIRTjI9aYihklvJIo5m2KuWyB1rHWKvYHaa4MozKQaetpiSM0uLZkLhl5VsdKJEuCOMc0i5aGPh6Lu2dmUAU6iNikLQ4AqziOcVTyToNUewR1rDL0pnGa9sqv7aCAEYGaLbXBRuelT7usNFxVjF5FS+CGiwjvo+M1ibUYkU+KqK9E6LmFN+OuDyB51T2eqfmZu5aCVOSA7AD+ufKrr8y2hbZaatrBU+FXK4x4RnP0BzVdaX8N0PAx3eh6iqbUtet4Lsd5GCnK+EA7jn1B/hQ7fWkZj3B2O55xyV+hA/rSKqr5A9kbQJOKnGdxqqsbyGQbGnyy9RIcH6eVW9sQwDKQVIyCKH2JT2HhXmnEWl0FMx0FPYaJ1g1lulC3VWqeSUYkFKSNspzNAnSmY20wmhJ7ilJbt2+KmpoqRkiq7OZgNGPzNE7/NKdzRAnFE8rISK7T5YbOMW0qyIRkkuMjPrxVhbRRW6sUYyNI24bfOs2gSVB3gVgPJhmnkRUXbGoUegq97ccC447AxwgIxY5Zjk49aXMah807JwKUf1pOToJ1tjsCg4IqxgTpVZZyZIFXMPwis/MHIdE4qZWvKalVGlsYQHFDuYnmhkjhkaKRhxIoyVowHNS2k4xnOaZjXJFGgah2pu9NMsJRL7bJ3XeqMANj4emDjB5qjm1O8v7qVQfy8o4dURSnTofp71v152TsLy7eeV5ApOViQ7ETJJbAHmxJyT61zzXLJ9F1Ga3W3MkUs2xIwpPB5HNak45a2itaaPWsdinFxPOZtxLEAZyBxj/PrTNhYTzyWs8r960ybiO7yYwemcH+HNIDTpLgSukTCZk8Mcuf1bZx4fQVmPTNfSwkuYYzcWFu7KxBJwc845yQPaj9W0Dt66L/TVsDqXcyzkGJ8hcHBYnrmttSEKAFAAHQAVz3SrS7vXSSSyupVj2nKKQcHoQT8s10ax8VpHxN4QP8AdBz9aRU7YUPgNAvSjYqMfWjEcUmkOXRChuKmRzXjVeiRfNRZ6nJS7GilE7IS0pLTDUCUU5EbAYrO2sGvbqIgq7W5MR59atFu0K5FU6ofKjKrDzq5NNCB+ScNyKFu3NQACOtHiGaGnsnYza+EkVcQNwKqIhg09E+3FVckDJotUPFennighead1SOIFmZjgAetKxzZxVB2/fvtCSzKo63NwivGzld6jLY45xlRmkRh9rSfCGy98I2XT7231C1iu7OVJoJV3I6HIIp1RkA1z38Or5re/wBQ0nubeK2ijSe3Fu5ZSSSH6+vhP3rosXKjin14/pep6OqXL0zKpXvy8RbJjQ5O45UdfWhXl/a2IU3M6xlvhBPJ+VU952utIn7uNRk5wXO0VfxYXoTeWJ7Yt27tzb6I97Zqiyw8cjAKk8jir7SLVLbTLaFFAVYwcY8zzWqatfXWuWD2krRRW8hBzECWOOetNza/qdraf6aCC5kjUYRiV3ge/rTvwrWkuBf/AKcb+myyxcZpZ48VQWPb/TJZFg1NGsZmwP1hygPpkdPrWyqUlQSRMHRhlWU5BFVrnXIxVL6FAMPTFQkXaSawjcVWyIMkwoTUSSSOIBpZEQHoXYDNQfnkciqlyyQD9KXcU01DZN1dDOEWqDUzJHQSKspgMVkWglqddaCY+ajYLKtU5o6R8V6NM0dExVsAGI6Ii4ogSsheahs4kgxTEZ4oaDiiqKVWiUwqHHNJaraXd3NZy2csSNE5DiQZBU+noeBTyjiixL4qWuxk05e0JaB2astMu5bxFBupAAZP3c/EB6Dp9ql2g7TR2U50zT3Q35GWLDwxjGT9cc0XtBqZ0bSmuIkMk8jCOJOOp6nn0GT9K5hAdQeV+/Ed1crgtcBtmzJ5OD68g059d8gZs7+lxJqDXPeNM5kul4kkdsnHy9KXh7q4dgT3i7fAHUDd8mqvm/NXUaOUlSQcCPaBjJ6n/qs280lvOrRIDsbDqUPJPU49KnHNpr220Z10q6fJsmk98gwyqIT8Kjgr9KeZ1lDxo7L5Fh1HyrWF1MWu9ntu7Q/E3OPTjHSrCynjaCFg8buBwVfOK2PCq61j1r+TP8jJ+P8AVvgPd6PaXULC4JaVhgzgYY0HRNTv+y92LJH7/TyF2xyHG0D4ip8uvTpxQLnXY4r5bQJIz85wpOeM8evSkLm/vJ8JLAkUbqSM43YzwT9s0jy6wriey542TLpUdYtLuDUbdJ7aQPG+Bn0P9q0ubthed80UOmrG5Eh7idiJFMcm0jHoVKkH/wAval+y2sRW2ov+WmL2UhxOGOFVjgBhn3wPka3TUdLt9Rj2zriVCdkq/Ep+f9PSs72Wnx/Bs+PkltOujmIsNS7TamLPUZ3nivTvnRzgW6qcho/l0x7iurrEkMMcMYwkahVGc8AYFUfZ7sw+m3st9fXn5q4ZCkYVNqxqTk496vyMUrLdXKl/B+Woq9x0L4rBqbUOqqQhsiy0F46NWMUwEWKVEpzTuyvGKuOKGNeKOFrEacdKMFq8xZDFSVc1LbWVGKU2TonGmeKOsIrES8UccUugkiIjxxRoVwwrC9aYiUFl5wenSgneyTUO2douo3cJe4kt0sMsWHwtlQTnPXyH0NU1pb3V9eQzTWy91FGzqynh/ER1+Qzj1qp1TWobzVrvbM8QW7kEizMAjOHIHHQjgjngAUK41aX8wq2V1teHPjYKAV6BQemASeaP88r2v+RSy0m9MsdRWK3uXEIkUHKgO2RkeefXFDt41JZt4OAFJGDg+9MaTrsEjxre3E0Ucad4I5IzwTzzjnaPU0ut2l5cM0lotvAucNEdhcHkHHkOhySOtXfH8p4J9bjbX3/RRz+I8j3N6QzFcRNK8UhjIYjoMgr8qimlC0lFyu4KxJyvT61WzajGhM1lBHNJjClsjcB5nrwPXP3o95qV3cQJLGskUZGG3lQDj0zjj51K8zO883WvUCvCxziqY3tkp+7jm74R855ZRzjpkZ88ZpNVkYFhP+yUAlXJK9Poev3qclwHUMrqwPOQeDSjT+OtqvCw5KeV/TPw+Vlxysb+DiMVLBYHdVy/coM5UjBU46eWPXgV0/szeNfaLbSSszyIvdyEgqcr5ke4wa5Us2cFQCVIJGOozmt+/Dy6ee2voWGFgmXuuc+Bh6kk9R5+lYPk4PzvSPQ+Lk9jbgK9IvgNeXissfCaqaNATYVAijMKGRSmABasqKkVry1KOCqF9KzsrCGp5rieCmiTIFHEVQhHFNouas1QtID3BPSsrbnPINOKlGWPik1bDSFFiwMYqWymilDYYrvbZwJRzTcCE4IxwfOlk+KnYFxg+pz8qKJ5JS2cE7XPFFqeq28UZDx3bg5XkeJvMH5Y4qjjuEwiyKdsRLeEjr5dfLOelbh+MGnyab2kN7HGoh1OHPhH/wBi4DZP1X+Nc5Mu09PLFb3j4peHkzcias2nT9QaPDW8kR3YKvNEHOBkbRkf5ivR38/esAJtqHBjkGUxjp7jzxVHb6g0rxQyBjHjaVVgvHt6dKKbgCZu6LLJgbgXDD6H+lVLwtU9hqS2iu4O+Ym3MbFyxEOC6n+nrT+B3b95O7l/hEshYKPXPGPlmtba6SNsK4Zjy5xgBqyL0kDxk+uasY/BVpNsrZLqW0kXctwp+Fsjyz1pdpSSKrRckn3oiyZBZ2UKvxcjP2/zmtSskxOigvHp1tItraTccZAB65OK6X+GCk2GoFVAjW5Ea7eRwoPXHPxAdTznpXL4J4Y/Csbo2N4EzFGZNudyrjn0xXcOymlyaPodvbT4M5/WS48mbkjPOcdPLpWD5uWa5Nnw8bXZabeKHIp9KYrDDisp2jR0LFKGyUyRUWT2pTeyNCUi0EHFOSx+1JMOaKQGTRqnv96CprNHojYrD0pyKkIzTMb4rqBTLBKMBxSkUwHWj96D0NCMTCkcUCTismXjrQZJM+dEkcyacHmm4j4RikN9Bk1WytDma6hjPnucU2DlSQDt12dHafs5PZxhfzSHvrZj0EgGAPkwJU+xr5pvElhmkimRkmRtsiMMFW8wa+oF7Q6TsZzfwlSM5U59OeK51+KGl6Dr8bajpt5FHqir48A7Z1H72B19D8h8tLxfJUP1b4E5VNPaONLIxcKGCn3OKdgu5DEo35YDGDmq27jkhlKOjAgnPGKD3jqd2P41etK+SFGyymn2yYBHI5xWUuDVYZCTmiJJz1p0vSAvEi5tp3Mq92CX8huxVlbIv5YN32ZOFVZArryeB1446+tUUKu0e8AY6ZJxj3rZOzXZy+1yRZpgYbUAK07KMtjyXjn/ADOfOtnarlvQMyp4Rtn4faFbXmtJf92Ta2bZZ2HEknkoHopAPzAFdojkEnmPvWl6TDFp9tFb2sYhgiA2Dzz6/M85rZLOXAXy4rD8mnVcdFrFPqiyNRZq8h38+VSKr6VVcssAxUqltFCc4qZWgWDkpO4Ta2RTZpe69KdrgXQuBWdtZFECcUUoAqk4oqt6UtuIxS13qNtaJvnmVVHPWpqd9AJpdlqJMVLvj+9WtDtBFcRv+QiM5XqpOyqS81LV7pGKyJCFfb3Qbafv50tNLgF5V8N0vtbtbGNmnlyR0VAWJ+grWtS7ZXDwO1hGkR2+Eyrlj9B0qq/R0kq7riZLZivQtu59aqGguI9URJrhdmcZBySuOozUw5rr4L9slMHeazq17t/NahdDeNxjbwKPYAD+dJi5h3E7UYKduCp8X3rYNZa0veJp1V1XqoAz/nHFatfQum6S2SOQrwG6ZHTp61Zx1ORdaD/NpcllaTTyu3jWKMZ25Bw3kBRJgIYwiPvuOobHHHQc9KqTcSLH3c0QiYjG1eR8zUJ52jgBicsR8QBz/n96n8ueBfpyZ/JrqNzLG8SRxpjdtA5PnjA4NIaloUMYMsSERnnoePnQDq0qBkmYjcQfmKcs9VXu3j3LtbgqfSrWssc/B846+FMmnxS5C78jptGaZi7PXTAOu1iRkKRgge9WOjxhXmljkZEJ4IbH8affUJ7RxPGyHd4WfcOV96Ks1riQnNaKTTLe6tNViM6x4Hiw43rj5Vvdl2quLbUITKwktycGHaFG329K0maXvL5GyEhyWyTjPtRIr8T6gAoWMIpOQaDLNWkxal72d40u4ttTsIry2XKOD58qRwRVjb+E4rlfY3tTFpN3Ja3zs0FzIgRhJ/tn2X/25+VdYAHefWqNpzwx8PaLK3P6oURjQbc4XFTc0mtDkeDUOVh6ivbqUnlG7rQb0QwpdR5ik5pdz1CSUnpQS1OXKFVQUNTQbiq8MaYEox1pi4BRym27SXF0WW/D+F2GY8gYIx08/Ok9R1CCTCQg92CS2cjjr/MCqhtRe9kMcr7EOSGXjAzj+opyzsprWCUTNFuuEADMcMmDx/IU781D9mImH7cllp9//owJXKcgKijB+RNVl1qTrM8bSMzMfAP+6REz/rknl5UZBUZyKrpZI45FdWbK8jPkMVM+PPs2w/w0bHeaqqAo+WboR6fKteutRf8ASAeN9vsD1oM98ThjKwHkffFKDvHmWWU+DA25PJp+Lx5n4Gp0Wd9dSle9L8g8j3ocVzLIgTG9Sc5J86QuJHIYFsgCpWPdofGQBjKsfI0axpLoN8Isr9JRam4UhE3bdpPX3H1qyh09Z9PEff7ZZDktjw/LjmqZZkljUzybgRjB45p3SJbhZtwcGJRzg8ew+9LuK9ePgnSYbStKTVQwnjbEYPOPi28Yz9qp37PStqLwxN3K7uD6Ctxg1SFQIiwAPiJC4yT6VQ63M0N+0iTg7xwQfL2ocWbI6f8AgLTXQmuhTQyKJrvMeedrU5Z2lnbXXeSAylMBc/CfmPOlbPVCDuIULGvhXb8R86hdasZMpHCoB/ZAyaY/0b0wlNPstNUuIrmzLSW6hC2E2dc+VKyaIbHTFvVIZ3O+TI+EeQFJ6W4WZjdAhUywWmb/AFN9Ruo7e3XCqBwDwB71yVRwh6hepuf4YdmobqY6zqoVpUb/AE0Dc7OnjI9fT711aMk84rmv4fW11NdC+k3R20GUXnhyfL5DNdLjEknEasR61Ry++ShaRnvmQ9aILth5g+1Rey2kPPIEX0Byah+kLW3bbCiuw8260E+Dkp8vSGqKroIXuJvCsbY/8RS80Vwi7miYD1xRW1GVhwAPkaC1/IrZLfSrS8HGu3yF+LYvvJqJcetPCeCf/dRD74wahLYo/igkwf3Wrn47XQusNIRLmvd7jzod1BNC36yMqP316Ut3hPSltNCGmjhbXT20e+FsAgJkjIOWJP8AED7VaW+rQ3BCjChtu9m+JmA6/ImtbklaWyVORtYHjzyp/vUu4kiCyGVThgduen+c1pViTXI2kiQuXS6cbwASC2Oc48qHPNluMgZ5FSi0+71DUmgsbdpZN3woP5+ldJ7NdgILZo7rWnWeZTkQL8Cn39aHJkjGtsF1waTovZnVtaAe1gPdjrJN4UHy9a23Tvw2l2qdUvkAGPBbjJ+5roI2xoFjVUQcBVGABQ3kAGAfvWXm8/JX9oOzUbn8P9IaNhFPco56EtnH0rSte7H3+k5lK/mbVeTJETlR7rXWJZsZ55pVp8kdT/KpweVlXNcncnE4pkVR3qh89B5AZp+zuVBzIAd2BGhPA5/nW8612NstSDz2CrBdEE4A8Dn3FaHc2N5pUpgu4jFKDnY3n6EHzrSm4yIjsto7oSwtmFcFxtcHpjyx9ap9WuJHlG6M/quC3kT60tE0jSAO23H0OazcsUYb2BDDnPmamcalhkIWkuej7VXr70yk8dqMqdzeR9KAttI67e6dEHAI/rU0tGDbFikdgcHC5o3p9BLnozbGe8kONw3HGR1NbLo+kie+isbaQKX5d3xhfUn/AD0oOh9mtQup071TDCTztwW/6ra7HshfaZqMM6xm5syQJDkK4XPOfXyoLnb46LWPE3/cdE0r9H6Vp8cNjBugiXCyP5nzPzJyaxddqEQYQce1a5rnaa2ktDawSxhvJEPw4+VazHFqWoSgQxuqN8UknhH2qK/p4lFiMMa2bXqXalVVmL8D3pK0u9U1NhLZW5Ef/wCsvhX+9S0zs/Y20qzag5upl5G74V+lH1jWEijZYDtA4AFC19bC46kYmvpLZdksqtL57elV0mt7WyWzWs3N9JNKWLGkJrp+maD2JUo3ldfCjIb+NW+m66kvVh965TJcOE4Y/eiWWozRdK5U0dpHcLfUI5F25GPepvbWcrbmhjz7cVyyx7ROvUkVfQ9oMpnfRe6faF1hlnDYYnnYRwJI8jEBVRck8en1rc+zXYO5u/12tl7aENuEAxvb5nnArbNF0zTtFjC2cAVj8UjcufrVmbwDzpd+XviTJq2xixtLTTo9llDFCnntXBPzo3fgdKrJL7HnS5vST1rNzNsBMunn4pWWY+tJLdZ4Joq5c0iYf0PZ7cWqSRknpxUljwelHjUZpqpLg4PaRYIxVlcaFY6lB3N/bQ3EfB2yLnHypOAYPHWr60O5Fqay+nT5CRr/AP8AAezQff8AomA4/Zbkfank0HS7WMCDTrWIAcbYxV2/SgSdOelKfk3vmg+CkNugbaYowPTaK1DtRp6WEwni2k3LnwEcqcetb3Oo3ZFAlSGVSk0Suh6hhmtDx8j7Cx16s5hbarPazhijIuMY64q1TtVM0TRSEsrDHDdKvtR7M2UoLWzGEn9kcr9v71o81ojsWKHaD0Iwat+zfRejLNFjY6pDa47qzUeeSOaPc9opSfCAp6ZzxVMtrA3Kx5H/AD/vXjawg8IoPu2ajbHdlpHrL+IyEt6YPWq+6uWnfc2QPTNRW2Y8Lj6GiC0cnB21D2ztpChY5rKwGRx4c5q7stIMjAyHAq+tbe0tgMRAsP2iMml1kUle/IldGr23Z64uVz3ZUfvt0okvZuSAZDI//EVtj3GemfvS0j5Pi+9K/Wtld+RWzT5NPePpQt06ceKtoureOblhhvVarGt5EO0Dd706ck0Ox+Qmh55WApZrg55o7jI6Gk5VOehrPezMXJ5pi3Q4qduHc0vGpLdDVlaxHjAo5W+yQ8VuWxVvaWucc0taR+IZFXcEYCjFJ8jJ6TwSgaWgAweTXmttp6U8ig1mZBsz51lfvXsToSjXaasrK4C+HIzVVK5XOKW/NFHJwc1owv1k42tpAV60tNIAOtU0OpvjBrLXbPSnge+QtjM0o55oBnwKWmmOOtJyTtzjpWhhTlaO2PyTHBINVN7OgBBCn2xS1zdPgjOKorq6kMhG7zrShEb10Nyx2pYnuUyerChbIN3gjUY9RSZnespK1S5OWS/8likcZ8sf8abgWNeQq59T1qtjkOBTMcpPTP2qve0T719ZZqwP9qnvFJozCiiXHlVX6RsY3Y60CSUHoaC8xoJcmmJbI2EeX3oJYk1Fj86hk+9MUaB9j//Z">
+      
+      <p>Hình ảnh minh họa</p>
+      <p>Bảo vệ môi trường là một vấn đề quan trọng và cấp bách trong bối cảnh hiện nay. Các hành động bảo vệ môi trường không chỉ giúp duy trì sự sống cho con người mà còn bảo vệ sự đa dạng sinh học và ổn định hệ sinh thái. Dưới đây là một số thông tin về bảo vệ môi trường/<p>
+    </div>
+    <div class="card">
+      <h2>NGUYÊN NHÂN</h2>
+      <h5>Sự ô nhiễm của môi trường</h5>
+      
+      <img src="https://www.google.com/imgres?q=%E1%BA%A3nh%20g%C3%A2y%20%C3%B4%20nhi%E1%BB%85m%20m%C3%B4i%20tr%C6%B0%E1%BB%9Dng&imgurl=https%3A%2F%2Fvupc.monre.gov.vn%2FData%2Ffiles%2F%25C3%2594-NHI%25E1%25BB%2584M-M%25C3%2594I-TR%25C6%25AF%25E1%25BB%259CNG1.jpg&imgrefurl=https%3A%2F%2Fvupc.monre.gov.vn%2Flinh-vuc-moi-truong%2F4256%2Ftrach-nhiem-hinh-su-cua-phap-nhan-doi-voi-hanh-vi-gay-o-nhiem-moi-truong-theo-luat-hinh-su-viet-nam&docid=SHdgClwHmPDtiM&tbnid=QG6pQRtBZCyXQM&vet=12ahUKEwjss-3sr9GLAxX5nq8BHcwBPJYQM3oECBgQAA..i&w=602&h=423&hcb=2&ved=2ahUKEwjss-3sr9GLAxX5nq8BHcwBPJYQM3oECBgQAA">
+      <p></p>Nguyên nhân gây ô nhiễm môi trườngJ
+      Con người là nguyên nhân chính tàn phá môi trường. Nông nghiệp. ...
+      Hoạt động nông nghiệp khiến nguồn nước bị ô nhiễm. Công nghiệp. ...
+      Nước thải nhà máy chưa qua xử lý thải trực tiếp vào môi trường. Các chất thải rắn.
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2> <FOOter>Lý Tấn Lộc, Huỳnh Tấn Đô, Trương Lương Quốc Bảo, Phan Hoàng Giang, Nguyễn Văn Chuyển 12A 13</FOOter> </h2>
+</div>
+
+</body>
+</html>
